@@ -1,0 +1,4 @@
+
+git log --online (verify current commit )
+git commit --amend (this file opening in vim - when update file then use this command after resend update added last commit)
+git commit --amend -m "login system done by me" (after using previous commit line update with current line updated)
