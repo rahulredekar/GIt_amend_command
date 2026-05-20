@@ -1,4 +1,62 @@
 
-git log --online (verify current commit )
+git log --oneline (verify current commit )
 git commit --amend (this file opening in vim - when update file then use this command after resend update added last commit)
 git commit --amend -m "login system done by me" (after using previous commit line update with current line updated)
+Above all command use before (git push) do not try after (git push)
+
+Use `git commit --amend` to modify the **most recent commit**.
+
+### Basic amend
+
+```bash
+git commit --amend
+```
+
+This opens your editor so you can:
+
+* change the commit message
+* include any newly staged changes
+
+---
+
+### Amend only the commit message
+
+```bash
+git commit --amend -m "New commit message"
+```
+
+---
+
+### Add forgotten files to the last commit
+
+```bash
+git add file.txt
+git commit --amend
+```
+
+---
+
+### Amend without changing the message
+
+```bash
+git add file.txt
+git commit --amend --no-edit
+```
+
+---
+
+### Important note about pushed commits
+
+If the commit was already pushed to a remote, amending rewrites history. You'll usually need:
+
+```bash
+git push --force-with-lease
+```
+
+Prefer `--force-with-lease` over `--force` because it is safer.
+
+---
+
+Official Git docs:
+[Git commit documentation](https://git-scm.com/docs/git-commit?utm_source=chatgpt.com)
+
