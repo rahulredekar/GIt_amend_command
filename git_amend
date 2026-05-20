@@ -1,3 +1,4 @@
+Use `git commit --amend` to modify the **most recent commit**.
 
 git log --oneline (verify current commit )
 git commit --amend (this file opening in vim - when update file then use this command after resend update added last commit)
